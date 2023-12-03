@@ -13,8 +13,9 @@ Mail Application for NPWD Phone
 3. Ensure `npwd_qbx_mail` BEFORE `npwd`
 4. Add app to NPWD config.json in the `apps` section `"apps": ["'npwd_qbx_mail"]`
 
-#### Do not change resource name. If you want to change it, you'll have to download the source code, alter `fetchNui.ts`, and build the project.
+#### Do not change the resource name. You must download the source code, alter `fetchNui.ts`, and build the project to change it.
 
 ## Screenshots
-![dark_inbox](https://github.com/dusan01/npwd_qbx_garage/assets/7904473/88ec843e-6441-4e73-b2ca-75389f78605b) ![dark_message](https://github.com/dusan01/npwd_qbx_garage/assets/7904473/84a0bf8e-981a-4ad6-82e2-afa1050f1d6e)
-![light_inbox](https://github.com/dusan01/npwd_qbx_garage/assets/7904473/f59e4ece-3856-4503-a631-790dd773c571) ![light_message](https://github.com/dusan01/npwd_qbx_garage/assets/7904473/de134728-46ed-4631-a841-413d3339ce60)
+![dark_inbox](https://github.com/Qbox-project/npwd_qbx_mail/assets/7904473/88bf707e-528c-4af8-8650-9fb289754a7f) ![dark_message](https://github.com/Qbox-project/npwd_qbx_mail/assets/7904473/0c71cda6-5fd2-4cf6-adf8-4dccf6b560be)
+![light_inbox](https://github.com/Qbox-project/npwd_qbx_mail/assets/7904473/d0e9386d-740f-4b9d-af14-3e343d70593a) ![light_message](https://github.com/Qbox-project/npwd_qbx_mail/assets/7904473/88619014-5485-4c26-9677-bfee7f7c857f)
+
