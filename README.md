@@ -3,15 +3,24 @@ Mail Application for NPWD Phone
 
 ## Dependencies
 - [qbx_core](https://github.com/Qbox-project/qbx_core)
+- [ox_lib](https://github.com/overextended/ox_lib)
 - [oxmysql](https://github.com/overextended/oxmysql)
-
-## Requires NPWD 1.5.0 or higher.
+- [NPWD](https://github.com/project-error/npwd)
 
 ## Install
-1. Download the `npwd_qbx_mail.zip` from releases.
-2. Unzip and add the resource to your server resources folder
-3. Ensure `npwd_qbx_mail` BEFORE `npwd`
-4. Add app to NPWD config.json in the `apps` section `"apps": ["'npwd_qbx_mail"]`
+
+#### Please note that this project is still under development and is not yet fully prepared for use. Experienced individuals may proceed with building the source code, while others are advised to await further updates.
+
+How to build the source code:
+
+    git  clone  https://github.com/Qbox-project/npwd_qbx_mail.git
+    cd  npwd_qbx_mail/src
+    pnpm  i
+    pnpm  build
+
+Once it's build, follow the steps below:
+1. Ensure `npwd_qbx_mail` BEFORE `npwd`
+2. Add app to NPWD config.json in the `apps` section `"apps": ["npwd_qbx_mail"]`
 
 #### Do not change the resource name. You must download the source code, alter `fetchNui.ts`, and build the project to change it.
 
