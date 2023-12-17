@@ -66,11 +66,12 @@ const MailModal = () => {
           height: '100%',
           width: '100%',
           background: isDarkMode ? 'rgb(23 23 23 / 1)' : '#fafafa',
+          overflow: 'auto'
         }}
         square
       >
-        <Container sx={{ height: '100%' }}>
-          <Box sx={{ height: '100%' }}>
+        <Container>
+          <Box>
             <Box pt={2} pb={1}>
               <Button
                 size="large"
@@ -109,7 +110,7 @@ const MailModal = () => {
               <Box
                 pl={1}
                 pt={'12px'}
-                sx={{ fontSize: '18px', height: '70%' }}
+                sx={{ fontSize: '18px' }}
                 dangerouslySetInnerHTML={{ __html: sanitizedMessage }}
               />
             )}
@@ -124,7 +125,7 @@ const MailModal = () => {
                   variant="contained"
                   onClick={handleSubmitButton}
                   startIcon={<CheckIcon />}
-                  sx={{ color: '#fff' }}
+                  sx={{ color: '#fff', background: '#2e7d32 !important'}}
                 >
                   ACCEPT
                 </Button>
