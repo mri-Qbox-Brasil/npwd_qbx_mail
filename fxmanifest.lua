@@ -1,5 +1,6 @@
 fx_version 'cerulean'
 game 'gta5'
+version '1.0.0'
 
 description 'Qbox Mail app for NPWD'
 version '1.0.0'
