@@ -3,14 +3,14 @@ import ReactDOM from 'react-dom';
 import '../npwd.config';
 
 import { HashRouter } from 'react-router-dom';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import App from './App';
 import image from './bg.png';
-import { NuiProvider } from 'react-fivem-hooks';
-import { IPhoneSettings } from '@project-error/npwd-types';
+import { IPhoneSettings } from '@npwd/types';
 import i18next from 'i18next';
 import { createTheme } from '@mui/material';
-import { RecoilEnv } from 'recoil';
+import { RecoilEnv, RecoilRoot } from 'recoil';
+import { lightTheme } from './app.theme';
 
 RecoilEnv.RECOIL_DUPLICATE_ATOM_KEY_CHECKING_ENABLED = false;
 
@@ -55,34 +55,24 @@ const settings = {
   },
 } as IPhoneSettings;
 
-const theme = createTheme({
-  palette: {
-    mode: 'light',
-  },
-});
-
 /*
  *   Providers loaded here will only be applied to the development environment.
  *   If you want to add more providers to the actual app inside NPWD you have to add them in APP.tsx.
  */
 
 const Root = () => {
-  if (process.env.NODE_ENV === 'production' || process.env.REACT_APP_IN_GAME) {
-    return null;
-  }
-
   return (
     <HashRouter>
-      <React.Suspense fallback='Loading dev env'>
-        <NuiProvider>
+      <RecoilRoot>
+        <React.Suspense fallback='Loading dev env'>
           <Container>
             <Background src={image} />
             <AppContainer>
-              <App settings={settings} i18n={i18next} theme={theme} />
+              <App settings={settings} i18n={i18next} theme={createTheme(lightTheme)} />
             </AppContainer>
           </Container>
-        </NuiProvider>
-      </React.Suspense>
+        </React.Suspense>
+      </RecoilRoot>
     </HashRouter>
   );
 };
