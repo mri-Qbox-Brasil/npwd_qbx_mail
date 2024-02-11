@@ -1,9 +1,9 @@
 fx_version 'cerulean'
 game 'gta5'
 
-description 'npwd_qbx_mail'
+description 'Qbox Mail app for NPWD'
+version '1.0.0'
 repository 'https://github.com/Qbox-project/npwd_qbx_mail'
-version '0.1.0'
 
 client_script 'client/client.lua'
 
@@ -23,3 +23,4 @@ files {
 
 lua54 'yes'
 use_experimental_fxv2_oal 'yes'
+provide 'npwd_qb_mail'
