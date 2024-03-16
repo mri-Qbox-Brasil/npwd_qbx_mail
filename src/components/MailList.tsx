@@ -20,7 +20,7 @@ const MailList = () => {
     getMailItems()
       .then(val => setMails(val))
       .catch(console.error);
-  });
+  }, []);
 
   useNuiEvent<Mail[]>('npwd_qbx_mail', 'newMail', (data) => {
     if (!data) return;
